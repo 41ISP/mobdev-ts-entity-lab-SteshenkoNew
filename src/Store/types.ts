@@ -11,7 +11,7 @@ export interface  IToilet{
   publishedAt: string
   Name: string
   Price: number
-  DateCreate: "2020-06-08"
+  DateCreate: string
   Description?: string 
   Material: ToiletMaterial
   Category: ToiletCategory
@@ -30,14 +30,15 @@ export const MATERIAL_LABELS: Record<ToiletMaterial, string> = {
     plastic: "Пластик"
 }
 
-export const CATEGORIES = ["floor", "wall", "smart"] as const
+export const CATEGORIES = ["Bethroom", "Restroom", "Washroom"] as const
 export type ToiletCategory = (typeof CATEGORIES)[number]
 
 export const CATEGORY_LABELS: Record<ToiletCategory, string> = {
-    floor: "Наполный",
-    wall: "Подвесной",
-    smart: "Компактный",
+    Bethroom: "Ванная",
+    Restroom: "Туалет",
+    Washroom: "Уборная",
 }
+
 
 export interface IMedia {
   id: number
